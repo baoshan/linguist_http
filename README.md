@@ -23,7 +23,7 @@ Linguist_http uses sinatra to wrap Linguist as a http service, providing two api
 
 ## Installation ##
 
-  1. clone the repository: ```git clone git@github.com:baoshan/linguist_http```
-  2. change the directory: ```cd linguist_http```
-  3. install dependencies: ```bundle install```
-  4. kickstart the server: ```ruby app.rb```
+  ```git clone git@github.com:baoshan/linguist_http```
+  ```cd linguist_http```
+  ```bundle install```
+  ```ruby app.rb```
