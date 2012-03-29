@@ -23,6 +23,11 @@ Linguist_http uses sinatra to wrap Linguist as a http service, providing two api
 
 ## Installation ##
 
+To get it, clone the repo and run Bundler to install its dependencies.
+
+The linguist library is not published as a rubygem, so the project reference (a forked) Linguist
+as a Git in its Gemfile.
+
 ```
 git clone git@github.com:baoshan/linguist_http
 cd linguist_http
