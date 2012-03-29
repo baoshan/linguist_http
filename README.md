@@ -18,8 +18,8 @@ in a software-as-a-service scenario, and also hurts performance.
 
 Linguist_http uses sinatra to wrap Linguist as a http service, providing two apis:
 
-  1. (get) /repo/<expanded_path_of_the_repository>, offering language statistics.
-  2. (get) /file/<expanded_path_of_the_repository>, listing documentable sources.
+  1. `(get) /repo/<expanded_path_of_the_repository>`, offering language statistics.
+  2. `(get) /file/<expanded_path_of_the_repository>`, listing documentable sources.
 
 ## Installation ##
 
