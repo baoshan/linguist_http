@@ -3,8 +3,8 @@ require 'bundler/setup'
 require 'linguist'
 require 'sinatra'
 
-get '/stat/*' do
-  repo = Linguist::Repository.from_directory("/#{params[:splat]}")
+get '/statist' do
+  repo = Linguist::Repository.from_directory(params['path'])
   stream do |out|
     repo.languages.sort_by { |_, size| size }.reverse.each do |language, size|
       percentage = ((size / repo.size.to_f) * 100).round
@@ -13,9 +13,9 @@ get '/stat/*' do
   end
 end
 
-get '/touched' do
-  dir  = '/' + params['path']
-  file = File.open dir + '/.created'
+get '/sources' do
+  dir  = params['path']
+  file = File.open params['list']
   stream do |out|
     file.each do |source|
         source = source.strip

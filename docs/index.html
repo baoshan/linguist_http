@@ -1,0 +1,37 @@
+<!DOCTYPE html>  <html> <head>   <title>title</title>   <meta http-equiv="content-type" content="text/html; charset=UTF-8">   <meta name="generator" content="Docco">   <link rel="stylesheet" media="all" href="docco.css" /> </head> <body>   <div id="container">     <div id="background"></div>      <ol>          <li><span>100%</span>&nbsp;<span>44</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>Ruby</span>&nbsp;</li>          </ol>          <hr/>      <ol>                     <li>Thu, 29 Mar 2012 14:44:39 +0800, Baoshan Sheng, Update README.md</li>                     <li>Thu, 29 Mar 2012 14:42:51 +0800, Baoshan Sheng, Update README.md</li>                     <li>Thu, 29 Mar 2012 14:37:42 +0800, Baoshan Sheng, Update README.md</li>                     <li>Thu, 29 Mar 2012 14:36:25 +0800, Baoshan Sheng, Update README.md</li>                     <li>Thu, 29 Mar 2012 14:33:53 +0800, Baoshan Sheng, Update README.md</li>            </ol>     <hr/>      <p>A dead simple HTTP wraper for linguist, offering interoperability for node.js, while
+reducing the linguist CLI startup time through a persistent sinatra server.</p>
+
+<h2>Background</h2>
+
+<p><a href="http://github.com/github/linguist">Linguist</a> is the savant behind GitHub
+dealing with language detection and statistics.</p>
+
+<p><a href="http://github.com/baoshan/docas">Docas</a> invokes linguist from the shell command line,
+which have to bear a one-second startup procedure for loading gems.</p>
+
+<p>This is not a huge problem in a stand-alone environment (developer generates the
+documentation for her repository through the <code>docas</code> command-line), but is uneconomic
+in a software-as-a-service scenario, and also hurts performance.</p>
+
+<h2>Exposed APIs</h2>
+
+<p>Linguist_http uses sinatra to wrap Linguist as a http service, providing two apis:</p>
+
+<ol>
+<li><code>(get) /repo/&lt;expanded_path_of_the_repository&gt;</code>, offering language statistics.</li>
+<li><code>(get) /file/&lt;expanded_path_of_the_repository&gt;</code>, listing documentable sources.</li>
+</ol>
+
+<h2>Installation</h2>
+
+<p>To get it, clone the repo and run Bundler to install its dependencies.</p>
+
+<p>The linguist library is not published as a rubygem, so the project reference (a forked version of)
+Linguist as a Git source in its Gemfile.</p>
+
+<p><code>
+git clone git@github.com:baoshan/linguist_http
+cd linguist_http
+bundle install
+ruby app.rb
+</code></p>      <hr/>       [{"n":"app.rb","s":752,"m":""},{"n":"docs","c":[{"n":"index.css","s":7108,"m":"","i":1},{"n":"index.html","s":2822,"m":"","i":1}]},{"n":"Gemfile","s":104,"m":"Thu, 29 Mar 2012 14:26:58 +0800","i":1},{"n":"Gemfile.lock","s":790,"m":"Thu, 29 Mar 2012 14:26:58 +0800","i":1},{"n":"README.md","s":1302,"m":"Thu, 29 Mar 2012 14:44:39 +0800","i":1},{"n":"test.rb","s":380,"m":""}]    </div> </body> </html> 
