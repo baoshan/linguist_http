@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/baoshan/linguist.git
-  revision: 27f1ea76f0d4c086d7410cc9058246ec91807b83
+  revision: fc56a6855b4fb40b7fefc720a5e8bc5e8ec92b3b
   specs:
     linguist (1.0.0)
       charlock_holmes (~> 0.6.6)
